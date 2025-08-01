@@ -17,7 +17,7 @@ LaunchLens helps entrepreneurs find the **perfect cities** to launch their busin
 **Username:** `demo_user`  
 **Password:** `demo123`
 
-![LaunchLens Demo](https://launchlens-nine.vercel.app)
+[LaunchLens Demo](https://launchlens-nine.vercel.app)
 
 <details>
 <summary><strong>⚡ How It Works</strong></summary>
