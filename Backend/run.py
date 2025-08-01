@@ -396,8 +396,6 @@ def analyze(data: BusinessRequest, current_user: dict = Depends(get_current_user
             "general_demand": round(pop * 100, 1)
         })
 
-        time.sleep(1)
-
     return {
         "idea": idea,
         "country": country,
