@@ -4,7 +4,7 @@
 
 LaunchLens helps entrepreneurs and business owners identify the best cities to launch or expand their business by analyzing cultural trends, demand patterns, and local business ecosystems.
 
-![LaunchLens Demo](https://launchlens-nine.vercel.app)
+[LaunchLens Demo](https://launchlens-nine.vercel.app)
 
 ## ✨ Features
 
