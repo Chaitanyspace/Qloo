@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+
 # MySQL connection details from environment variables
 MYSQL_HOST = os.getenv('MYSQL_HOST', 'localhost')
 MYSQL_DB = os.getenv('MYSQL_DB', 'cs')
