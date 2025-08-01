@@ -247,11 +247,28 @@ def get_tag_id(query):
     except Exception:
         pass
 
-    if query.lower() in fallback_tags:
-        return fallback_tags[query.lower()][0]['tag_id']
+    query_lower = query.lower()
+    
+    # First, try exact match on seed_word
+    if query_lower in fallback_tags:
+        return fallback_tags[query_lower][0]['tag_id']
+    
+    # Second, try to find tag_name that matches the query exactly
     for seed, entries in fallback_tags.items():
-        if seed in query.lower():
+        for entry in entries:
+            if entry['tag_name'].lower() == query_lower:
+                return entry['tag_id']
+    
+    # Third, try partial matching - check if query is contained in seed_word
+    for seed, entries in fallback_tags.items():
+        if query_lower in seed:
             return entries[0]['tag_id']
+    
+    # Fourth, try partial matching - check if seed_word is contained in query
+    for seed, entries in fallback_tags.items():
+        if seed in query_lower:
+            return entries[0]['tag_id']
+    
     return None
 
 def get_top_cities(country):
